@@ -15,15 +15,7 @@ public class Command {
         return sugarCount;
     }
 
-    public void setSugarCount(int sugarCount) {
-        this.sugarCount = sugarCount;
-    }
-
     public DrinkTypes getDrinkType() {
         return drinkType;
-    }
-
-    public void setDrinkType(DrinkTypes drinkType) {
-        this.drinkType = drinkType;
     }
 }

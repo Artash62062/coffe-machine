@@ -9,11 +9,11 @@ public class CoffeeMachine {
     public void start() {
         boolean isWorking = true;
         while (isWorking) {
-           CommandController.commandController.setCommand();
-           Command command = CommandController.commandController.getCommand();
-           ProductFactory productFactory = new ProductFactory();
-           Product finalProduct = productFactory.getProduct(command);
-           System.out.println(finalProduct);
+            CommandController.commandController.setCommand();
+            Command command = CommandController.commandController.getCommand();
+            productFactory = new ProductFactory();
+            Product finalProduct = productFactory.getProduct(command);
+            System.out.println(finalProduct);
         }
     }
 

@@ -13,28 +13,28 @@ public class CommandVerifications {
     }
 
     public static Command analiseCommand(String commandInOneString) {
-        if(commandInOneString.length()>4) {
+        if (commandInOneString.length() > 4) {
             return null;
         }
-        if(commandInOneString.length() == 4 && commandInOneString.charAt(2)!=':') {
+        if (commandInOneString.length() == 4 && commandInOneString.charAt(2) != ':') {
             return null;
         }
-        if(commandInOneString.length() == 3 && commandInOneString.charAt(1)!=':') {
+        if (commandInOneString.length() == 3 && commandInOneString.charAt(1) != ':') {
             return null;
         }
 
         String[] command = commandInOneString.split(":");
         DrinkTypes drinkType = getDrinkTypeByCommand(command[0]);
-        if(command[1].length()>1 || !(Character.isDigit(command[1].charAt(0)))) {
+        if (command[1].length() > 1 || !(Character.isDigit(command[1].charAt(0)))) {
             return null;
         }
         int sugarCount = Integer.parseInt(command[1]);
-        if(drinkType == null) {
+        if (drinkType == null) {
             return null;
-        } else if(sugarCount < 0 || sugarCount>10) {
+        } else if (sugarCount < 0 || sugarCount > 10) {
             return null;
         } else {
-            return new Command(sugarCount,drinkType);
+            return new Command(sugarCount, drinkType);
         }
     }
 

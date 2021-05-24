@@ -8,7 +8,7 @@ import Models.Drinks.Drink;
 import java.util.Arrays;
 
 public class Product {
-    Sugar[] sugar ;
+    Sugar[] sugar;
     Cup cup = new Cup();
     Drink drink;
     Stick stick;
@@ -32,24 +32,14 @@ public class Product {
         this.sugar = sugar;
     }
 
-    public Cup getCup() {
-        return cup;
-    }
 
     public void setCup(Cup cup) {
         this.cup = cup;
     }
 
-    public Drink getDrink() {
-        return drink;
-    }
 
     public void setDrink(Drink drink) {
         this.drink = drink;
-    }
-
-    public Stick getStick() {
-        return stick;
     }
 
     public void setStick(Stick stick) {
@@ -59,16 +49,16 @@ public class Product {
     @Override
     public String toString() {
         StringBuilder productString = new StringBuilder();
-        if(drink == null) {
+        if (drink == null) {
             productString.append("You have a Empty Cup ");
-        }else {
+        } else {
             productString.append("You Have Cup of ").append(drink.toString());
         }
 
-        if(sugar.length == 0) {
+        if (sugar.length == 0) {
             productString.append(" Without sugar ");
         } else {
-            productString.append(" With ") .append(sugar.length).append(" Sugar").append("With Stick");
+            productString.append(" With ").append(sugar.length).append(" Sugar").append(" With Stick ");
         }
         return productString.toString();
     }

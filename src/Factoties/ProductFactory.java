@@ -12,7 +12,7 @@ public class ProductFactory {
     public Product getProduct(Command command) {
         if (command.getSugarCount() > 0) {
             product.setStick(new Stick());
-        } else if (command.getSugarCount()== 0) {
+        } else if (command.getSugarCount() == 0) {
             product.setStick(null);
         }
         product.setSugar(new Sugar[command.getSugarCount()]);

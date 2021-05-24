@@ -14,10 +14,10 @@ public class CommandController {
 
     public void setCommand() {
         boolean isCommandInValid = true;
-        while(isCommandInValid) {
-            String stringCommand =  CommandVerifications.inputCommand();
+        while (isCommandInValid) {
+            String stringCommand = CommandVerifications.inputCommand();
             this.command = CommandVerifications.analiseCommand(stringCommand);
-            if(this.command == null) {
+            if (this.command == null) {
                 System.out.println("Unknown Command");
                 continue;
             }
